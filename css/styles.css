@@ -1,0 +1,80 @@
+/* ======================== Google Fonts ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+/* =========================== Colors ========================== */
+:root {
+    --primary-color: hsl(160, 84%, 39%);
+    --text-color: hsl(160, 84%, 39%);
+    --small-font-size: 400;
+    --medium-font-size: 600;
+    --large-font-size: 800;
+}
+
+* {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* ====================== Navigation ===================== */
+
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbrand {
+    font-size: 2rem;
+}
+
+.list_item {
+    display: inline;
+    padding: 0.6rem;
+}
+
+.link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.item:hover, .item:active {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.icon {
+    color: #FFFFFF;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+    }
+    .icon {
+        display: inline;
+    }
+}
+
+@media screen and (max_width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a{
+        display: block;
+        text-align: left;
+    }
+}

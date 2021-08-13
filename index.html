@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========================== Unicons ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- ============================ CSS ============================ -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+    <script src="/js/main.js"></script>
+
+
+    <title>NerdySpook | Web Developer</title>
+</head>
+<body>
+    <!-- ========================== Header ========================== -->
+
+    <nav class="navbar container" id="navbar">
+        <div class="navbrand">
+            <a href="#" class="link">NerdySpook</a>
+        </div>
+
+        <ul class="list">
+            <li class="list_item">
+                <a href="" class="link item">Home</a>
+            </li>
+            <li class="list_item">
+                <a href="" class="link item">Projects</a>
+            </li>
+            <li class="list_item">
+                <a href="" class="link item">Blogs</a>
+            </li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            if (x.className === "navbar") {
+            x.className += " responsive";
+            } else {
+            x.className = "navbar";
+            }
+        }
+    </script>
+ 
+</body>
+</html>
