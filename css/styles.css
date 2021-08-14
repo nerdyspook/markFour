@@ -4,10 +4,6 @@
 /* =========================== Colors ========================== */
 :root {
     --primary-color: hsl(160, 84%, 39%);
-    --text-color: hsl(160, 84%, 39%);
-    --small-font-size: 400;
-    --medium-font-size: 600;
-    --large-font-size: 800;
 }
 
 * {
@@ -18,63 +14,87 @@
 
 /* ====================== Navigation ===================== */
 
-nav {
+.navbar {
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 8vh;
     align-items: center;
-    justify-content: space-around;
-    height: 10vh;
 }
-
-ul {
-    list-style: none;
+a {
+    text-decoration: none;
+    color: #d2d0db;
 }
 
 .navbrand {
+    color: #F9FAFB;
     font-size: 2rem;
+    padding-left: 1rem;
 }
 
-.list_item {
-    display: inline;
-    padding: 0.6rem;
-}
-
-.link {
+.nav__toggler {
     color: #FFFFFF;
-    text-decoration: none;
+    padding: 0.5rem;
+    opacity: .7;
+}
+.nav__list {
+    background-color: #4B5563;
+    list-style: none;
+    width: 100%;
+    transform: translateY(5.5px);
 }
 
-.item:hover, .item:active {
-    font-weight: bold;
-    font-size: 150%;
+.nav__item {
+    padding: 0.5rem 0;
 }
 
-.icon {
+.nav__item > a {
+
+    color: #d2d0db;
+    transition: color 0.3s;
+}
+.nav__item>a:hover {
+    font-size: 120%;
     color: #FFFFFF;
-    display: none;
+    transition: all 0.2s;
 }
 
-@media screen and (max-width: 600px) {
-    .navbar a {
+/* ================== Collapsible Component =================== */
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    transition: max-height 0.7s;
+}
+
+.navbar.collapsible--expanded .nav__toggler {
+    opacity: 1;
+}
+
+/* ================= Responsive ========================== */
+/* Tablets and wider screens */
+@media screen and (min-width: 768px) {
+    .nav__toggler {
         display: none;
     }
-    .icon {
-        display: inline;
-    }
-}
 
-@media screen and (max_width: 600px) {
-    .navbar.responsive {
-        position: relative;
+    .nav__list {
+        background-color: var(--primary-color);
+        width: auto;
+        display: flex;
+        max-height: 100%;
+        opacity: 1;
+        transform: translateY(0px);
     }
-    .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a{
-        display: block;
-        text-align: left;
+
+    .nav__item {
+        padding-right: 3rem;
+        font-size: 1.2rem;
+
     }
 }

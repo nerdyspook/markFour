@@ -1,8 +1,6 @@
-function myFunction() {
-    var x = document.getElementById("navbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
-    }
-  }
+const collapsibles = document.querySelectorAll(".collapsible");
+collapsibles.forEach((item) =>
+    item.addEventListener("click", function () {
+        this.classList.toggle("collapsible--expanded")
+    })
+);
