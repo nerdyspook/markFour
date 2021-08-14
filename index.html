@@ -28,10 +28,10 @@
                 <a href="">Home</a>
             </li>
             <li class="nav__item">
-                <a href="">Projects</a>
+                <a href="#projects">Projects</a>
             </li>
             <li class="nav__item">
-                 <a href="">Blogs</a>
+                 <a href="#blogs">Blogs</a>
             </li>
         </ul>
     </nav>
@@ -40,12 +40,63 @@
     <header class="block block--skewed-left">
         <div class="container grid grid--1x2">
             <div class="hero__content">
-                <h1>Hello Folks</h1>
-                <p>I am Susanto Mahato an enthusiast Web Developer.</p>
+                <h1 class="block__heading">Hello Folks</h1>
+                <p class="hero__tagline">I am Susanto Mahato, a Bengal based <strong>Web Developer</strong> .</p>
             </div>
+            <img src="/images/hero.svg" alt="A hero image for header">
         </div>
     </header>
 
+    <main>
+        <section class="technologies container-center" id="technologies">
+            <h2>Technologies</h2>
+            <img src="/images/html.png" alt="">
+            <img src="/images/css.png" alt="">
+            <img src="/images/js.png" alt="">
+            <img src="/images/git.png" alt="">
+            <img src="/images/react.png" alt="">
+            <img src="/images/nodejs.png" alt="">
+        </section>
+
+        <section class="projects container-center" id="projects">
+            <h2>Projects</h2>
+            
+            <div class="slides__container">
+                <img class="mySlides" src="/images/minion.png" alt="Banana translator app">
+                <img class="mySlides" src="/images/emoji.png" alt="">
+                <img class="mySlides" src="" alt="">
+                <img class="mySlides" src="" alt="">
+                <img class="mySlides" src="" alt="">
+                <img class="mySlides" src="" alt="">
+
+                <button class="btn-display-left" onclick="plusDivs(-1)">&#10094; Prev</button>
+                <button class="btn-display-right" onclick="plusDivs(+1)">Next &#10095;</button>
+            </div>
+
+            <p>I like to showcase my projects and you can see them hosted online.</p>
+            <a class="btn-projects" href="">See All Projects</a>
+            
+        </section>
+
+        <section class="blogs" id="blogs">
+            <h2>Blogs</h2>
+            <p>I am also working on some technical and non-technical blogs. I like to document my journey of learning.</p>
+            <a class="btn-blogs" href="">See All Blogs</a>
+        </section>
+    </main>
+
+    <footer>
+        <section >
+            
+            <ul class="social">
+                <li class="icon"><a href="https://github.com/nerdyspook"><img src="/images/github.png" alt=""></a></li>
+                <li class="icon"><a href="https://www.linkedin.com/in/susanto-mahato-761118168"><img src="/images/linkedin.png" alt=""></a></li>
+                <li class="icon"><a href="https://twitter.com/nerdyspook"><img src="/images/twitter.png" alt=""></a></li>
+            </ul>
+
+            <p>Created with love by NerdySpook ♥️</p>
+        </section>
+    </footer>
     <script src="/js/main.js"></script>
 </body>
 </html>
